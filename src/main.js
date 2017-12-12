@@ -7,6 +7,7 @@ import axios from './server';
 // Vue.config.productionTip = false
 // Vue.config.silent = false
 Vue.prototype.$axios = axios;
+Vue.prototype.$api = axios;
 
 new Vue({
     el: '#app',

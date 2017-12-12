@@ -19,16 +19,9 @@
         },
         methods: {
             insertData(){
-                this.$axios.get('http://localhost:8888/')
-                .then(function (response) {
-
-                    console.log(response);
-
-                }).catch(function (error) {
-
-                    console.log(error);
-
-                });
+                this.$axios({type: "get", url: "/"}, null, (res)=>{
+                    console.log(res)
+                })
             }
         }
     }
