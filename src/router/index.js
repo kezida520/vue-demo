@@ -6,5 +6,5 @@ import routes from './routes';
 
 Vue.use(Router); //CDN需注释
 
-// export default new VueRouter({routes}) //CDN不需要注释
-export default new Router({routes})
+// export default new VueRouter({routes}); //CDN不需要注释
+export default new Router({routes}); //CDN需注释
