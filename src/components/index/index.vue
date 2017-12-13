@@ -24,7 +24,7 @@
             },
             insertData(){
                 this.$router.push({name: 'login', query: { userId: 123 }})
-                this.$ajax({type: "get", url: "/"}, null, (res)=>{
+                this.$ajax(this.$api.index.insert, null, (res)=>{
                     console.log(res) 
                 })
             }

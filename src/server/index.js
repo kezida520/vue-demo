@@ -32,7 +32,18 @@ function apiPost(url, param = {}, success, failure) {
     });
 }
 
-export default function(arg, params, success, failure){
+export default function(){
+    let arg, params, success, failure;
+    if(typeof arguments[1] === "function"){
+        arg = arguments[0];
+        success = arguments[1];
+        failure = arguments[2];
+    }else{
+        arg = arguments[0];
+        params = arguments[1];
+        success = arguments[2];
+        failure = arguments[3];
+    }
     if(arg.type === "get"){
         apiGet(arg.url, params, success, failure)
     }else{
